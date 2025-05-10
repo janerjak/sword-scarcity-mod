@@ -43,13 +43,13 @@ public abstract class RelevantAdvancementStorage {
 			"story/mine_stone",
 			SwordElement.EARTH,
 			"Debug: Mine stone",
-			"Minecraft"
+			"Stein abbauen"
 		),
 		new RelevantAdvancement(
 			"story/upgrade_tools",
 			SwordElement.AIR,
 			"Debug: Upgrade tools",
-			"Debug: Werkzeug aufrüsten"
+			"Werkzeug aufrüsten"
 		),
 	};
 

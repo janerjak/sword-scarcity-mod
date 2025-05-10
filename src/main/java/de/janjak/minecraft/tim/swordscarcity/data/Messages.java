@@ -12,7 +12,7 @@ public abstract class Messages {
 		SwordElement element = swordAdvancementToBroadcast.rewardingElement();
 
 		Text header = Text.literal("Elementschwerter: ")
-			.formatted(Formatting.DARK_GREEN, Formatting.BOLD, Formatting.UNDERLINE);
+			.formatted(Formatting.DARK_GREEN, Formatting.BOLD);
 
 		Text playerPart = advancedPlayer.getDisplayName();
 
@@ -24,7 +24,7 @@ public abstract class Messages {
 
 		Text afterSwordPart = Text.literal(" erhalten! ");
 
-		Text advancementDescriptionPart = Text.literal(swordAdvancementToBroadcast.germanTitle())
+		Text advancementDescriptionPart = Text.literal("(" + swordAdvancementToBroadcast.germanTitle() + ")")
 			.setStyle(Style.EMPTY.withColor(TextColor.fromRgb(SwordElementColor.of(element))))
 			.formatted(Formatting.BOLD, Formatting.ITALIC);
 
