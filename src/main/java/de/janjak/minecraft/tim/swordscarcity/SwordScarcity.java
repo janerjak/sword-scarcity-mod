@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.janjak.minecraft.tim.swordscarcity.data.RelevantAdvancementStorage;
-import de.janjak.minecraft.tim.swordscarcity.data.RewardSaveData;
 
 public class SwordScarcity implements ModInitializer {
 	public static final String MOD_ID = "sword-scarcity";

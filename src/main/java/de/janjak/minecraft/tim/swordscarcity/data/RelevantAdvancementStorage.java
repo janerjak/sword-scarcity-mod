@@ -13,8 +13,14 @@ public abstract class RelevantAdvancementStorage {
 			"TODO"
 		),
 		new RelevantAdvancement(
-			"story/root",
+			"story/mine_stone",
 			SwordElement.EARTH,
+			"Minecraft",
+			"Minecraft"
+		),
+		new RelevantAdvancement(
+			"story/upgrade_tools",
+			SwordElement.AIR,
 			"Minecraft",
 			"Minecraft"
 		),
