@@ -10,19 +10,46 @@ public abstract class RelevantAdvancementStorage {
 			"nether/obtain_blaze_rod",
 			SwordElement.FIRE,
 			"Into Fire",
-			"TODO"
+			"Spiel mit dem Feuer"
 		),
+		new RelevantAdvancement(
+			"nether/return_to_sender",
+			SwordElement.FIRE,
+			"Return to Sender",
+			"Zurück zum Absender"
+		),
+		new RelevantAdvancement(
+			"end/elytra",
+			SwordElement.AIR,
+			"Sky's the Limit",
+			"Hinterm Horizont geht's weiter"
+		),
+		new RelevantAdvancement(
+			"adventure/overoverkill",
+			SwordElement.EARTH,
+			"Over-Overkill",
+			"Großmeister des Kampfes"
+		),
+		new RelevantAdvancement(
+			"adventure/throw_trident",
+			SwordElement.WATER,
+			"A Throwaway Joke",
+			"Ein Witz zum Wegwerfen"
+		),
+
+
+		// The following are for debugging only
 		new RelevantAdvancement(
 			"story/mine_stone",
 			SwordElement.EARTH,
-			"Minecraft",
+			"Debug: Mine stone",
 			"Minecraft"
 		),
 		new RelevantAdvancement(
 			"story/upgrade_tools",
 			SwordElement.AIR,
-			"Minecraft",
-			"Minecraft"
+			"Debug: Upgrade tools",
+			"Debug: Werkzeug aufrüsten"
 		),
 	};
 

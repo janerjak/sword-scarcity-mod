@@ -3,9 +3,7 @@ package de.janjak.minecraft.tim.swordscarcity.data;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.World;
 
 import java.io.File;
 import java.io.FileReader;

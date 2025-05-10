@@ -2,6 +2,7 @@ package de.janjak.minecraft.tim.swordscarcity;
 
 import java.util.UUID;
 
+import de.janjak.minecraft.tim.swordscarcity.data.Messages;
 import de.janjak.minecraft.tim.swordscarcity.data.RelevantAdvancement;
 import de.janjak.minecraft.tim.swordscarcity.data.RelevantAdvancementStorage;
 import de.janjak.minecraft.tim.swordscarcity.data.RewardSaveData;
@@ -62,7 +63,7 @@ abstract class AdvancementChecker {
 		RewardToInventory.addElementalSwordToPlayerInventory(player, relevantAdvancement.getRewardItemId());
 		RewardSaveData.markAdvancementCompletedSafe(relevantAdvancement.locationKey(), playerUuid);
 
-		// TODO: Server announcement
+		Messages.broadcastSwordObtain(server, player, relevantAdvancement);
 
 		return true;
 	}
