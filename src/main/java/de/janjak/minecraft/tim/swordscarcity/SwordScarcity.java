@@ -9,21 +9,21 @@ import org.slf4j.LoggerFactory;
 import de.janjak.minecraft.tim.swordscarcity.data.RelevantAdvancementStorage;
 
 public class SwordScarcity implements ModInitializer {
-	public static final String MOD_ID = "sword-scarcity";
+    public static final String MOD_ID = "sword-scarcity";
 
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
-	public void onInitialize() {
-		if (FabricLoader.getInstance().getEnvironmentType() != EnvType.SERVER) {
-			LOGGER.warn("This initialization will do nothing, since the mod is not designed to run on clients");
-			return;	
-		}
-		LOGGER.info("Running on server");
-		// Initialize all modules
-		RelevantAdvancementStorage.initialize();
+    @Override
+    public void onInitialize() {
+        if (FabricLoader.getInstance().getEnvironmentType() != EnvType.SERVER) {
+            LOGGER.warn("This initialization will do nothing, since the mod is not designed to run on clients");
+            return;    
+        }
+        LOGGER.info("Running on server");
+        // Initialize all modules
+        RelevantAdvancementStorage.initialize();
 
-		// Register events
-		EventHandlers.registerEventListeners();
-	}
+        // Register events
+        EventHandlers.registerEventListeners();
+    }
 }

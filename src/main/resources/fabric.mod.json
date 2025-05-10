@@ -1,41 +1,41 @@
 {
-	"schemaVersion": 1,
-	"id": "sword-scarcity",
-	"version": "1.21.1.1",
-	"name": "Sword Scarcity",
-	"description": "A Minecraft Fabric mod to hide Four Elemental Swords crafting recipes and instead grant them to players uniquely through advancements. (To be ran in server environment)",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://minecraft.janjak.de",
-		"sources": "https://github.com/janerjak/sword-scarcity-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/sword-scarcity/icon.png",
-	"environment": "server",
-	"entrypoints": {
-		"main": [
-			"de.janjak.minecraft.tim.swordscarcity.SwordScarcity"
-		],
-		"client": [
-			"de.janjak.minecraft.tim.swordscarcity.SwordScarcityClient"
-		]
-	},
-	"mixins": [
-		"sword-scarcity.mixins.json",
-		{
-			"config": "sword-scarcity.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "elementalswords"
-	}
+    "schemaVersion": 1,
+    "id": "sword-scarcity",
+    "version": "1.21.1.1",
+    "name": "Sword Scarcity",
+    "description": "A Minecraft Fabric mod to hide Four Elemental Swords crafting recipes and instead grant them to players uniquely through advancements. (To be ran in server environment)",
+    "authors": [
+        "Me!"
+    ],
+    "contact": {
+        "homepage": "https://minecraft.janjak.de",
+        "sources": "https://github.com/janerjak/sword-scarcity-mod"
+    },
+    "license": "CC0-1.0",
+    "icon": "assets/sword-scarcity/icon.png",
+    "environment": "server",
+    "entrypoints": {
+        "main": [
+            "de.janjak.minecraft.tim.swordscarcity.SwordScarcity"
+        ],
+        "client": [
+            "de.janjak.minecraft.tim.swordscarcity.SwordScarcityClient"
+        ]
+    },
+    "mixins": [
+        "sword-scarcity.mixins.json",
+        {
+            "config": "sword-scarcity.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.14",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "elementalswords"
+    }
 }

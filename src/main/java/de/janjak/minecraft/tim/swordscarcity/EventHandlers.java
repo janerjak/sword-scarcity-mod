@@ -12,29 +12,29 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 
 public abstract class EventHandlers {
-	protected static void registerEventListeners() {
-		ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-			// Build save state, if required
-			RewardSaveData.initializeIfRequired(server);
-		});
+    protected static void registerEventListeners() {
+        ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+            // Build save state, if required
+            RewardSaveData.initializeIfRequired(server);
+        });
 
         ServerPlayConnectionEvents.JOIN.register(EventHandlers::onServerPlayConnectionPlayerJoin);
-		ServerMessageEvents.GAME_MESSAGE.register(EventHandlers::onGameMessageReceived);
-	}
+        ServerMessageEvents.GAME_MESSAGE.register(EventHandlers::onGameMessageReceived);
+    }
 
-	// Called whenever a player joins
-	private static void onServerPlayConnectionPlayerJoin(ServerPlayNetworkHandler handler, PacketSender sender, MinecraftServer server) {
-		AdvancementChecker.checkPlayerForNewAdvancements(server, handler.player);
-	}
+    // Called whenever a player joins
+    private static void onServerPlayConnectionPlayerJoin(ServerPlayNetworkHandler handler, PacketSender sender, MinecraftServer server) {
+        AdvancementChecker.checkPlayerForNewAdvancements(server, handler.player);
+    }
 
-	// Called on every server game message, crucially: including new advancements
-	private static void onGameMessageReceived(MinecraftServer server, Text text, boolean bool) {
-		// Scan for new advancements amongst all players
-		for (ServerWorld world : server.getWorlds()) {
+    // Called on every server game message, crucially: including new advancements
+    private static void onGameMessageReceived(MinecraftServer server, Text text, boolean bool) {
+        // Scan for new advancements amongst all players
+        for (ServerWorld world : server.getWorlds()) {
             for (ServerPlayerEntity player : world.getPlayers()) {
                 AdvancementChecker.checkPlayerForNewAdvancements(server, player);
             }
         }
-		RewardSaveData.save();
-	}
+        RewardSaveData.save();
+    }
 }

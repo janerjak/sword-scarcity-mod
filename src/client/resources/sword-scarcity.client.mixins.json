@@ -1,9 +1,9 @@
 {
-	"required": false,
-	"package": "de.janjak.minecraft.tim.swordscarcity.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [],
-	"injectors": {
-		"defaultRequire": 1
-	}
+    "required": false,
+    "package": "de.janjak.minecraft.tim.swordscarcity.mixin.client",
+    "compatibilityLevel": "JAVA_21",
+    "client": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
 }
