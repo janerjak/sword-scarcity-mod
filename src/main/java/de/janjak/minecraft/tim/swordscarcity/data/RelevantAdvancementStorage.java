@@ -10,7 +10,13 @@ public abstract class RelevantAdvancementStorage {
 			"nether/obtain_blaze_rod",
 			SwordElement.FIRE,
 			"Into Fire",
-			""
+			"TODO"
+		),
+		new RelevantAdvancement(
+			"story/root",
+			SwordElement.EARTH,
+			"Minecraft",
+			"Minecraft"
 		),
 	};
 

@@ -13,7 +13,10 @@ import net.minecraft.text.Text;
 
 public abstract class EventHandlers {
 	protected static void registerEventListeners() {
-		ServerLifecycleEvents.SERVER_STARTED.register(server -> {});
+		ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+			// Build save state, if required
+			RewardSaveData.initializeIfRequired(server);
+		});
 
         ServerPlayConnectionEvents.JOIN.register(EventHandlers::onServerPlayConnectionPlayerJoin);
 		ServerMessageEvents.GAME_MESSAGE.register(EventHandlers::onGameMessageReceived);
@@ -26,6 +29,7 @@ public abstract class EventHandlers {
 
 	// Called on every server game message, crucially: including new advancements
 	private static void onGameMessageReceived(MinecraftServer server, Text text, boolean bool) {
+		// Scan for new advancements amongst all players
 		for (ServerWorld world : server.getWorlds()) {
             for (ServerPlayerEntity player : world.getPlayers()) {
                 AdvancementChecker.checkPlayerForNewAdvancements(server, player);

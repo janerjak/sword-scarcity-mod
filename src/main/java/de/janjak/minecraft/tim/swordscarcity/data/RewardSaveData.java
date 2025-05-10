@@ -2,6 +2,11 @@ package de.janjak.minecraft.tim.swordscarcity.data;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.World;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -13,18 +18,25 @@ import java.util.UUID;
 
 public abstract class RewardSaveData {
 	private static Map<String, UUID> completedAdvancements = null;
-	private static final File SAVE_FILE = new File("saves/swordscarcity_obtained_swords.json");
+	private static File SAVE_FILE = null;
 	private static final Gson GSON_CONVERTER = new Gson();
 
-	public static void initialize() {
+	public static void initializeIfRequired(MinecraftServer server) {
 		if (RewardSaveData.completedAdvancements == null) {
+			RegistryKey<World> worldKey = World.OVERWORLD;
+			World world = server.getWorld(worldKey);
+        	String worldName = world.getRegistryKey().getValue().getPath();
+			RewardSaveData.SAVE_FILE = new File("saves/swordscarcity_obtained_swords_" + worldName.replace(" ", "") + ".json");
+
 			RewardSaveData.completedAdvancements = new HashMap<>();
 			RewardSaveData.load();
 		}
 	}
 
-	public static void markAdvancementCompleted(String locationKey, UUID advancedPlayerUuid) {
-		RewardSaveData.completedAdvancements.put(locationKey, advancedPlayerUuid);
+	public static void markAdvancementCompletedSafe(String locationKey, UUID advancedPlayerUuid) {
+		if (!RewardSaveData.completedAdvancements.containsKey(locationKey)) {
+			RewardSaveData.completedAdvancements.put(locationKey, advancedPlayerUuid);
+		}
 		save();
 	}
 

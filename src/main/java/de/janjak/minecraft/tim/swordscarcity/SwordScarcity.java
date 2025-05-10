@@ -23,7 +23,6 @@ public class SwordScarcity implements ModInitializer {
 		LOGGER.info("Running on server");
 		// Initialize all modules
 		RelevantAdvancementStorage.initialize();
-		RewardSaveData.initialize();
 
 		// Register events
 		EventHandlers.registerEventListeners();
