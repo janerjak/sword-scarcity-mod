@@ -6,10 +6,11 @@
       "name": "Minecraft Client",
       "request": "launch",
       "cwd": "${workspaceFolder}/run",
-      "console": "integratedTerminal",
+      "console": "internalConsole",
       "stopOnEntry": false,
       "mainClass": "net.fabricmc.devlaunchinjector.Main",
-      "vmArgs": "-Dfabric.dli.config\u003dF:\\Vault\\Repos\\Own\\sword-scarcity-mod\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dclient -Dfabric.dli.main\u003dnet.fabricmc.loader.impl.launch.knot.KnotClient",
+      "vmArgs": "-Dfabric.dli.config=F:/Vault/Repos/Own/sword-scarcity-mod/.gradle/loom-cache/launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotClient -javaagent:C:/Users/darkn/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar",
+      // -XX:+AllowEnhancedClassRedefinition
       "args": "",
       "env": {},
       "projectName": "sword-scarcity-mod"
@@ -19,10 +20,26 @@
       "name": "Minecraft Server",
       "request": "launch",
       "cwd": "${workspaceFolder}/run",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "net.fabricmc.devlaunchinjector.Main",
+      "vmArgs": "-Dfabric.dli.config=F:/Vault/Repos/Own/sword-scarcity-mod/.gradle/loom-cache/launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotServer -javaagent:C:/Users/darkn/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar",
+      // -javaagent\u003dC:\\Users\\darkn\\.gradle\\caches\\modules-2\\files-2.1\\net.fabricmc\\sponge-mixin\\0.15.5+mixin.0.8.7\\22f9eb729e216a091673a574a5906dc1b9027fb3\\sponge-mixin-0.15.5+mixin.0.8.7.jar
+      "args": "nogui",
+      "env": {},
+      "projectName": "sword-scarcity-mod"
+    },
+    
+    {
+      "type": "java",
+      "name": "Minecraft Server (Terminal)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/run",
       "console": "integratedTerminal",
       "stopOnEntry": false,
       "mainClass": "net.fabricmc.devlaunchinjector.Main",
-      "vmArgs": "-Dfabric.dli.config\u003dF:\\Vault\\Repos\\Own\\sword-scarcity-mod\\.gradle\\loom-cache\\launch.cfg -Dfabric.dli.env\u003dserver -Dfabric.dli.main\u003dnet.fabricmc.loader.impl.launch.knot.KnotServer",
+      "vmArgs": "-Dfabric.dli.config=F:/Vault/Repos/Own/sword-scarcity-mod/.gradle/loom-cache/launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotServer -javaagent:C:/Users/darkn/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.5+mixin.0.8.7/22f9eb729e216a091673a574a5906dc1b9027fb3/sponge-mixin-0.15.5+mixin.0.8.7.jar",
+      // -javaagent\u003dC:\\Users\\darkn\\.gradle\\caches\\modules-2\\files-2.1\\net.fabricmc\\sponge-mixin\\0.15.5+mixin.0.8.7\\22f9eb729e216a091673a574a5906dc1b9027fb3\\sponge-mixin-0.15.5+mixin.0.8.7.jar
       "args": "nogui",
       "env": {},
       "projectName": "sword-scarcity-mod"

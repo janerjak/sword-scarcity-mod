@@ -3,13 +3,13 @@
 	"id": "sword-scarcity",
 	"version": "${version}",
 	"name": "Sword Scarcity",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Minecraft Fabric mod to hide Four Elemental Swords crafting recipes and instead grant them to players uniquely through advancements. (To be ran in server environment)",
 	"authors": [
 		"Me!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://minecraft.janjak.de",
+		"sources": "https://github.com/janerjak/sword-scarcity-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/sword-scarcity/icon.png",
@@ -36,6 +36,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"another-mod": "elementalswords"
 	}
 }
