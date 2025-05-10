@@ -20,13 +20,14 @@ public abstract class RewardSaveData {
 	private static Map<String, UUID> completedAdvancements = null;
 	private static File SAVE_FILE = null;
 	private static final Gson GSON_CONVERTER = new Gson();
+	
+	private static final String getSaveFilePath(MinecraftServer server) {
+		return "saves/swordscarcity_obtained_swords_" + WorldInterface.getLevelName(server) + ".json";
+	}
 
 	public static void initializeIfRequired(MinecraftServer server) {
 		if (RewardSaveData.completedAdvancements == null) {
-			RegistryKey<World> worldKey = World.OVERWORLD;
-			World world = server.getWorld(worldKey);
-        	String worldName = world.getRegistryKey().getValue().getPath();
-			RewardSaveData.SAVE_FILE = new File("saves/swordscarcity_obtained_swords_" + worldName.replace(" ", "") + ".json");
+			RewardSaveData.SAVE_FILE = new File(RewardSaveData.getSaveFilePath(server));
 
 			RewardSaveData.completedAdvancements = new HashMap<>();
 			RewardSaveData.load();
