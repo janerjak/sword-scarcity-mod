@@ -3,7 +3,6 @@
 	"package": "de.janjak.minecraft.tim.swordscarcity.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin",
 		"RecipeManagerAccessor"
 	],
 	"injectors": {
