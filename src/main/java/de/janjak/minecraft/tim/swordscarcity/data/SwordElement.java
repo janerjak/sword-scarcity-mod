@@ -13,9 +13,9 @@ enum SwordElement {
 abstract class SwordElementColor {
 	private static final Map<SwordElement, Integer> COLOR_MAP = new HashMap<>() {{
 		put(SwordElement.FIRE, 0xFF4400);
-		put(SwordElement.AIR, 0xDDDDFF);
+		put(SwordElement.AIR, 0xAADDFF);
 		put(SwordElement.WATER, 0x0022FF);
-		put(SwordElement.EARTH, 0x555500);
+		put(SwordElement.EARTH, 0x552800);
 	}};
 	private static final int DEFAULT_COLOR = 0xAAAAAA;
 	static int of(SwordElement element) {
