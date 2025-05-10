@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "sword-scarcity",
-	"version": "${version}",
+	"version": "1.21.1.1",
 	"name": "Sword Scarcity",
 	"description": "A Minecraft Fabric mod to hide Four Elemental Swords crafting recipes and instead grant them to players uniquely through advancements. (To be ran in server environment)",
 	"authors": [
