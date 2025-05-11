@@ -12,12 +12,15 @@ public abstract class RelevantAdvancementStorage {
             "Into Fire",
             "Spiel mit dem Feuer"
         ),
+        /*
+        Tim changed his mind
         new RelevantAdvancement(
             "nether/return_to_sender",
             SwordElement.FIRE,
             "Return to Sender",
             "Zurück zum Absender"
         ),
+        */
         new RelevantAdvancement(
             "end/elytra",
             SwordElement.AIR,
@@ -39,6 +42,7 @@ public abstract class RelevantAdvancementStorage {
 
 
         // The following are for debugging only
+        /*
         new RelevantAdvancement(
             "story/mine_stone",
             SwordElement.EARTH,
@@ -51,6 +55,7 @@ public abstract class RelevantAdvancementStorage {
             "Debug: Upgrade tools",
             "Werkzeug aufrüsten"
         ),
+        */
     };
 
     public static void initialize() {
