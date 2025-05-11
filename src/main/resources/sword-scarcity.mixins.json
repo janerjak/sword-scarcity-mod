@@ -1,11 +1,11 @@
 {
-	"required": true,
-	"package": "de.janjak.minecraft.tim.swordscarcity.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+    "required": true,
+    "package": "de.janjak.minecraft.tim.swordscarcity.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "RecipeManagerAccessor"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
 }

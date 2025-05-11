@@ -1,24 +1,29 @@
 package de.janjak.minecraft.tim.swordscarcity;
 
+import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
-
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.janjak.minecraft.tim.swordscarcity.data.RelevantAdvancementStorage;
+
 public class SwordScarcity implements ModInitializer {
-	public static final String MOD_ID = "sword-scarcity";
+    public static final String MOD_ID = "sword-scarcity";
 
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+    @Override
+    public void onInitialize() {
+        if (FabricLoader.getInstance().getEnvironmentType() != EnvType.SERVER) {
+            LOGGER.warn("This initialization will do nothing, since the mod is not designed to run on clients");
+            return;    
+        }
+        LOGGER.info("Running on server");
+        // Initialize all modules
+        RelevantAdvancementStorage.initialize();
 
-		LOGGER.info("Hello Fabric world!");
-	}
+        // Register events
+        EventHandlers.registerEventListeners();
+    }
 }
