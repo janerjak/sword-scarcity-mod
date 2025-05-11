@@ -21,7 +21,7 @@ public abstract class RewardSaveData {
     private static final Gson GSON_CONVERTER = new Gson();
     
     private static final String getSaveFilePath(MinecraftServer server) {
-        return "saves/swordscarcity_obtained_swords_" + WorldInterface.getLevelName(server) + ".json";
+        return "config/swordscarcity_obtained_swords_" + WorldInterface.getLevelName(server) + ".json";
     }
 
     public static void initializeIfRequired(MinecraftServer server) {
